@@ -47,7 +47,7 @@ passport.use('local-auth', new LocalStrategy(
   }
 ))
 
-passport.use('google-auth', new GoogleStrategy(
+/*passport.use('google-auth', new GoogleStrategy(
   {
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
@@ -86,4 +86,4 @@ passport.use('google-auth', new GoogleStrategy(
       next(null, false, { error: 'Error connecting to Google Auth' })
     }
   }
-))
+))*/

@@ -6,7 +6,7 @@ const hbs = require("hbs");
 const sessionConfig = require("./config/session.config");
 const passport = require('passport');
 
-// require("./config/db.config");
+require("./config/db.config");
 require('./config/passport.config');
 
 const app = express();

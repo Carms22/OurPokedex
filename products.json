@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "62f6b265fa35e5f938a91754"
+  },
+  "name": "Blaster Pistol",
+  "description": "Han Solo`s favorite weapon",
+  "price": 999.99,
+  "image": "https://www.4me.com/wp-content/uploads/2018/01/4me-icon-product.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62f6b3d4ca2f6327f6f05591"
+  },
+  "name": "Lightsaber",
+  "description": "Luke Skywalker`s favorite weapon",
+  "price": 2399.99,
+  "image": "https://www.4me.com/wp-content/uploads/2018/01/4me-icon-product.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fa4f266c975a84228b872b"
+  },
+  "name": "Mjölnir",
+  "description": "Thor`s favorite weapon",
+  "price": 1499.49,
+  "image": "https://www.4me.com/wp-content/uploads/2018/01/4me-icon-product.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fa4f3c6c975a84228b872c"
+  },
+  "name": "Mark V",
+  "description": "Tony Stark`s suitcase suit",
+  "price": 10599.99,
+  "image": "https://www.4me.com/wp-content/uploads/2018/01/4me-icon-product.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fa4f626c975a84228b872d"
+  },
+  "name": "Purple shorts",
+  "description": "Hulk`s favorite clothes",
+  "price": 29.99,
+  "image": "https://www.4me.com/wp-content/uploads/2018/01/4me-icon-product.png",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62fa4f676c975a84228b872e"
+  },
+  "name": "Batcycle",
+  "description": "Batman`s bike",
+  "price": 12999.1,
+  "image": "https://www.4me.com/wp-content/uploads/2018/01/4me-icon-product.png",
+  "__v": 0
+}]

@@ -12,7 +12,7 @@ const storage = new CloudinaryStorage({
   // cloudinary: cloudinary,
   cloudinary,
   params: {
-    folder: 'ironhack',
+    folder: 'OurPokedex',
     allowedFormats: ['jpg', 'png'],
     public_id: (req, file) => file.originalname.split('.')[0],
   },

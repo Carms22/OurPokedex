@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 });
 
 const router = require("./config/index.routes");
-//app.use(router);
+app.use(router);
 
 app.use((err, req, res, next) => {
   res.render("error", { err });

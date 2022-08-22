@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Pokemon = require('../models/Pokemon.model');
-const POKEMONS = require('../seeds/pokemon.seed.json')
+const POKEMONS = require('../data/pokemon.json')
 // Conectarme a la base de datos
 
 require('../config/db.config');

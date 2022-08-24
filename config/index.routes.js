@@ -1,9 +1,11 @@
 const router = require("express").Router();
 const passport = require('passport');
+const axios = require('axios')
 const miscController = require("../controllers/misc.controller");
 const authController = require("../controllers/auth.controller");
 const usersController = require("../controllers/users.controller");
 const pokemonController = require("../controllers/pokemon.controller")
+const nPokemonController = require("../controllers/nPokemon.controller")
 const authMiddlewares = require("../middlewares/authMiddleware");
 const fileUploader = require("../config/cloudinary.config")
 
@@ -29,11 +31,14 @@ router.get("/logout", authMiddlewares.isAuthenticated, authController.logout);
 // USERS
 router.get("/profile", authMiddlewares.isAuthenticated, usersController.profile);
 
-//POKEMON
+//OURPOKEMON
 router.get("/pokemon/list", authMiddlewares.isAuthenticated, pokemonController.list)
 router.get("/pokemon/create", authMiddlewares.isAuthenticated, pokemonController.create)
 router.post("/pokemon/create", authMiddlewares.isAuthenticated, fileUploader.single("image"), pokemonController.doCreate)
 router.get("/pokemons/:id", authMiddlewares.isAuthenticated, pokemonController.detail)
 router.delete("/pokemons/:id", authMiddlewares.isAuthenticated, pokemonController.delete)
+
+//NINTENDOPOKEMON
+router.get("/npokemon/list", authMiddlewares.isAuthenticated, nPokemonController.list)
 
 module.exports = router;

@@ -1,0 +1,36 @@
+<div class="container">
+  <h1 class="text-center mb-4">Store</h1>
+  <div class="row">
+    {{#if pokemon.length}}
+      {{#each pokemon as |poke|}}
+        <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex justify-content-center poke" data-id="{{poke._id}}">
+          <div class="card shadow bg-body rounded" style="width: 18rem;">
+            <img src={{poke.image}} class="card-img-top" alt={{poke.name}}>
+            <div class="card-body">
+              <h5 class="card-title">{{poke.name}}</h5>
+              <p class="card-text">{{poke.description}}</p>
+              <h4 class="card-title">{{poke.price}}</h4>
+              <div class="d-flex justify-content-between">
+                <a href="/pokemons/{{poke._id}}" class="btn btn-primary">See details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{else}}
+      <p>Store is empty :pensativo: Come back later</p>
+    {{/if}}
+  </div>
+  <hr class="my-4">
+  <div class="row">
+    <div class="col col-sm-8 col-md-6 col-lg-4 mx-auto">
+      <a href="/pokemons/create" class="btn btn-primary bg-light-green border-0 d-block w-300">Create Pokemon</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

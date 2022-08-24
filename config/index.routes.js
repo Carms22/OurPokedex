@@ -30,9 +30,9 @@ router.get("/profile", authMiddlewares.isAuthenticated, usersController.profile)
 
 //POKEMON
 router.get("/pokemon/list", authMiddlewares.isAuthenticated, pokemonController.list)
-router.get("pokemon/create", authMiddlewares.isAuthenticated, pokemonController.create)
-router.post("pokemon/create", authMiddlewares.isAuthenticated, pokemonController.doCreate)
-router.get("pokemon/:id", authMiddlewares.isAuthenticated, pokemonController.detail)
-router.delete("/pokemon/:id", authMiddlewares.isAuthenticated, pokemonController.delete)
+router.get("/pokemon/create", authMiddlewares.isAuthenticated, pokemonController.create)
+router.post("/pokemon/create", authMiddlewares.isAuthenticated, pokemonController.doCreate)
+router.get("/pokemons/:id", authMiddlewares.isAuthenticated, pokemonController.detail)
+router.delete("/pokemons/:id", authMiddlewares.isAuthenticated, pokemonController.delete)
 
 module.exports = router;

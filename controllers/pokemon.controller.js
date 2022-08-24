@@ -14,9 +14,14 @@ module.exports.create = (req, res, next)  => {
 };
 
 module.exports.doCreate =  (req, res,  next)   => {
-  Pokemon.create(req.body)
+  const pokemonToCreate = req.body;
+  if (req.file) {
+    pokemonToCreate.image = req.file.path
+  }
+
+  Pokemon.create(pokemonToCreate)
     .then((pokemon)  =>  {
-      res.redirect(`/pokemon/${pokemon._id}`)
+      res.redirect(`/pokemons/${pokemon._id}`)
     })
     .catch((err) => next(err))
 };

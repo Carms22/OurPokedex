@@ -5,6 +5,7 @@ const authController = require("../controllers/auth.controller");
 const usersController = require("../controllers/users.controller");
 const pokemonController = require("../controllers/pokemon.controller")
 const authMiddlewares = require("../middlewares/authMiddleware");
+const fileUploader = require("../config/cloudinary.config")
 
 const SCOPE = [
   "profile",
@@ -31,7 +32,7 @@ router.get("/profile", authMiddlewares.isAuthenticated, usersController.profile)
 //POKEMON
 router.get("/pokemon/list", authMiddlewares.isAuthenticated, pokemonController.list)
 router.get("/pokemon/create", authMiddlewares.isAuthenticated, pokemonController.create)
-router.post("/pokemon/create", authMiddlewares.isAuthenticated, pokemonController.doCreate)
+router.post("/pokemon/create", authMiddlewares.isAuthenticated, fileUploader.single("image"), pokemonController.doCreate)
 router.get("/pokemons/:id", authMiddlewares.isAuthenticated, pokemonController.detail)
 router.delete("/pokemons/:id", authMiddlewares.isAuthenticated, pokemonController.delete)
 

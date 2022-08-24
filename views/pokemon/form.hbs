@@ -1,7 +1,7 @@
 <div class="row justify-content-center mt-4">
   <div class="col col-sm-8 col-md-6 col-lg-4">
     <h1 class="my-4">Create new Pokémon</h1>
-    <form action="/pokemon/create" method="post" class="">
+    <form action="/pokemon/create" method="post" class="" enctype="multipart/form-data">
       <div class="input-group mb-2">
         <input
           type="text"
@@ -21,10 +21,9 @@
           aria-label="Status"
           value="{{ pokemon.status }}"
         >
-         <option value="Select Status">Select Status</option>
          <option value="Teacher Almighty">Teacher Almighty</option>
          <option value="Your Highness TA">Your Highness TA</option>
-         <option value="Peasant Student">Peasant Student</option>
+         <option value="Peasant Student" selected>Peasant Student</option>
         </select>
         {{#if error}}<div class="text-danger text-center mb-2">{{ error }}</div>{{/if}}
       </div>
@@ -47,13 +46,20 @@
           aria-label="Profile"
           value="{{ pokemon.profile }}"
         >
-         <option value="Select Profile"><span class="text-muted">Select Profile</span></option>
-         <option value="Technical">Technical</option>
+         <option value="Technical" selected>Technical</option>
          <option value="Artistic">Artistic</option>
          <option value="Marketing">Marketing</option>
          <option value="Healthcare">Healthcare</option>
          <option value="Entrepreneur">Entrepreneur</option>
         </select>
+        {{#if error}}<div class="text-danger text-center mb-2">{{ error }}</div>{{/if}}
+      </div>
+      <div class="input-group mb-2">
+        <input
+          type="file"
+          name="image"
+          class="form-control-file"
+        >
         {{#if error}}<div class="text-danger text-center mb-2">{{ error }}</div>{{/if}}
       </div>
       <div class="input-group mb-2">
